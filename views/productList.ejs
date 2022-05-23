@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <%- include('./layout/navbar')%>
+    <h1>Product List</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        
+            <% for(let i=0;i<products.length;i++){ %>
+           <tr>
+               <td> <%=products[i].title %> </td>
+               <td> <%=products[i].price %> </td>
+               <td> <img src="/images/<%=products[i].pic %>" width="150"/></td>
+               <!-- <button><a href="/product/getProduct/<%=products[i]._id %>"> View </a></button> -->
+               <td><button>Delete</button></td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+</html>

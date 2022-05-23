@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('./layout/navbar')%>
     <h1>Product Detail</h1>
+    <h1><%= product.title%></h1>
+    <h3><%=product.price%></h3>
+    <img src=<%="/images/"+product.pic %> width="300"/>
 </body>
 </html>

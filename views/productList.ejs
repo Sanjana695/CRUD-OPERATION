@@ -21,7 +21,7 @@
                <td> <%=products[i].title %> </td>
                <td> <%=products[i].price %> </td>
                <td> <img src="/images/<%=products[i].pic %>" width="150"/></td>
-               <!-- <button><a href="/product/getProduct/<%=products[i]._id %>"> View </a></button> -->
+               <td><button><a href=<%='product/getProduct/'+products[i]._id %>> View </a></button></td>
                <td><button>Delete</button></td>
             </tr>
             <% } %>
